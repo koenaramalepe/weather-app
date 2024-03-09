@@ -1,0 +1,10 @@
+body {
+    background-color: #c7eef5;
+
+}
+.weather-app {
+    background-color: orangered;
+    width: 600px;
+    margin: 40px auto;
+    border-radius: 10px;
+}
