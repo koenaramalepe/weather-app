@@ -29,9 +29,9 @@ function formatDate(date){
     let hours = date.getHours();
     let minutes = date.getMinutes();
     let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-    let day = days(date.getDay())
+    let day = days[date.getDay()]
 
-    console.log(`${day} ${hours}:${minutes}`)
+    return `${day} ${hours}:${minutes}`
     
 
 }
