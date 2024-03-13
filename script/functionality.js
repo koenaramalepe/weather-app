@@ -1,8 +1,29 @@
 function updateWeatherData(response){   
     let temperatureElement = document.querySelector("#temperature")
     temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+
     let displayedCity = document.querySelector("#city-name");
     displayedCity.innerHTML = response.data.city
+
+    let descriptionElement = document.querySelector("#weatherDescription");
+    descriptionElement.innerHTML = response.data.condition.description
+
+    let humidityElement = document.querySelector("#humidity")
+    let humidityValue = response.data.temperature.humidity
+    humidityElement.innerHTML = `${humidityValue}%`
+
+    let windElement = document.querySelector("#windData");
+    let windElementValue = response.data.wind.speed
+    windElement.innerHTML = `${windElementValue}km/h`
+
+    timeElement = document.querySelector("#time")
+    let timeValues = new Date(response.data.time * 1000)
+    timeElement.innerHTML = `${timeValues.getDay()} ${timeValues.getHours()}:${timeValues.getMinutes()}`
+    
+    
+}
+
+function formatDate(date){
     
 }
 
