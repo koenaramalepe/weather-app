@@ -17,14 +17,23 @@ function updateWeatherData(response){
     windElement.innerHTML = `${windElementValue}km/h`
 
     timeElement = document.querySelector("#time")
-    let timeValues = new Date(response.data.time * 1000)
-    timeElement.innerHTML = `${timeValues.getDay()} ${timeValues.getHours()}:${timeValues.getMinutes()}`
+    let date= new Date(response.data.time * 1000)
+    timeElement.innerHTML = formatDate(date)
+    
     
     
 }
 
 function formatDate(date){
     
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    let day = days(date.getDay())
+
+    console.log(`${day} ${hours}:${minutes}`)
+    
+
 }
 
 function searchCity(city){
