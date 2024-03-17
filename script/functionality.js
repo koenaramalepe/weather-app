@@ -20,7 +20,8 @@ function updateWeatherData(response){
     let date= new Date(response.data.time * 1000)
     timeElement.innerHTML = formatDate(date)
     
-    
+   let iconElement = document.querySelector("#icon");
+   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class"Weather-app-icon" />`
     
 }
 
@@ -30,6 +31,10 @@ function formatDate(date){
     let minutes = date.getMinutes();
     let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
     let day = days[date.getDay()]
+
+    if (minutes < 10){
+        minutes = `0${minutes}`
+    }
 
     return `${day} ${hours}:${minutes}`
     

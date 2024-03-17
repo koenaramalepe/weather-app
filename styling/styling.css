@@ -1,10 +1,11 @@
 body {
-    background: #f9f7fe;
+    background: #fffdcb;
     font-family: "Roboto", sans-serif;
   }
   
+  
   .application {
-    background: #ffffff;
+    background: #ffb38e;
     max-width: 600px;
     margin: 60px auto;
     padding: 30px;
@@ -23,7 +24,7 @@ body {
   }
   
   .current-details {
-    color: #cecdd4;
+    color: #747264;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -36,12 +37,14 @@ body {
   .temperature-value {
     font-size: 80px;
     font-weight: bold;
+    color: #757575;
   }
   
   .temperature-unit {
     font-size: 38px;
     position: relative;
-    top: -38px;
+    top: -5px;
+    color: #757575;
   }
   
   .emoji {
@@ -55,11 +58,11 @@ body {
     border-top: 1px solid #f9f7fe;
     text-align: center;
     padding-top: 15px;
-    color: #aba9b5;
+    color: #757575;
   }
   
   .search-input {
-    background-color: #f9f7fe;
+    background-color: #ff8e8f;
     border: none;
     color: #757575;
     font-size: 16px;
@@ -75,21 +78,32 @@ body {
   
   .temperature {
     font-size: 48px;
+    display: flex;
+    justify-content: space-between;
   }
   
   .weather-forecast {
     display: flex;
     justify-content: space-between;
+    color: #757575;
   }
   
   .search-button {
-    background-color: #885ef1;
-    color: #f2eefe;
+    background-color: #ff8e8f;
+    color: #757575;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     padding: 20px;
     line-height: 1;
     margin-left: 5px;
+  }
+  .icon {
+    width: 88px;
+    height: 88px;
+  }
+
+  a {
+    color: #29adb2;
   }
   
